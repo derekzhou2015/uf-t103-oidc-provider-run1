@@ -77,7 +77,9 @@ class MyAdapter {
      * - userCode {string} - [DeviceCode only] user code value
      * - deviceInfo {object} - [DeviceCode only] an object with details about the
      *     device_authorization_endpoint request
-     * - inFlight {boolean} - [DeviceCode only]
+     * - inFlight {boolean} - [DeviceCode only] true while a user code confirmation is being
+     *     processed, i.e. from the moment the end-user confirms until the flow either resolves
+     *     (accountId/error get assigned) or hands off to an interaction session
      * - error {string} - [DeviceCode and BackchannelAuthenticationRequest only] - error from authnz to be
      *     returned to the polling client
      * - errorDescription {string} - [DeviceCode and BackchannelAuthenticationRequest only] - error_description
